@@ -1,2 +1,37 @@
+#logo {
+  position: absolute;
+  width: 100px;
+  margin-top: -30px;
+  margin-left: -110px; }
+
+.navbar-brand {
+  margin-left: 110px; }
+
+.headerwrap {
+  margin-top: 80px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #e7e7e9; }
+
+.headerwrap.container {
+  width: 100%; }
+
+#f {
+  position: fixed;
+  padding: 0 !important;
+  height: 50px;
+  bottom: 0;
+  width: 100%; }
+  #f div {
+    margin-top: -10px; }
+
+.modal-footer {
+  margin-top: 0px !important; }
+
+.modal-header {
+  background-color: #222 !important; }
+
+.close {
+  color: white !important; }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('moonbowWebApp', ['ui.router','moonbowWebApp.loggedIn'])
+angular.module('moonbowWebApp', ['ui.router','moonbowWebApp.loggedIn','mgcrea.ngStrap'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -26,6 +26,7 @@ angular.module('moonbowWebApp', ['ui.router','moonbowWebApp.loggedIn'])
     .state('me', {
       url: "/me",
       templateUrl: "views/me.html",
+      controller: "MeCtrl",
     });
 
   // if none of the above states are matched, use this as the fallback
