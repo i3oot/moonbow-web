@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('moonbowWebApp', ['ui.router'])
+angular.module('moonbowWebApp', ['ui.router','moonbowWebApp.loggedIn'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -26,7 +26,7 @@ angular.module('moonbowWebApp', ['ui.router'])
     .state('me', {
       url: "/me",
       templateUrl: "views/me.html",
-    })
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');

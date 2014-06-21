@@ -40,7 +40,9 @@
           <ul class="nav navbar-nav navbar-right">
             <li ui-sref-active="active"><a ui-sref="home">HOME</a></li>
             <li ui-sref-active="active"><a ui-sref="gallery">GALLERY</a></li>
-            <li ui-sref-active="active"><a ui-sref="me">MY AREA</a></li>
+            <li ui-sref-active="active" login-required><a ui-sref="me">MY AREA</a></li>
+            <li login-required><a href="/" ng-click="logout()">LOGOUT</a></li>
+            <li is-anonymous><a ui-sref="me" ng-click="login()">LOGIN</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -69,6 +71,9 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+    <script src="bower_components/angularfire/angularfire.js"></script>
     <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
     <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
@@ -86,7 +91,10 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/NavCtrl.js"></script>
+        <script src="scripts/services/backendService.js"></script>
+        <script src="scripts/services/userService.js"></script>
+        <script src="scripts/directives/loggedIn.js"></script>
         <!-- endbuild -->
 </body>
 </html>
