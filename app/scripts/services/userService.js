@@ -75,6 +75,12 @@ angular.module('moonbow.services.user', ['moonbow.services.backend', 'firebase']
                     callback(user !== null);
                 }
             );
+        },
+        
+        currentUser: function(){return user;},
+        
+        addOwnedSprite: function(id, sprite){
+            userEndpoint.child(sprite.owner).child('sprites').push(id);
         }
         
     };

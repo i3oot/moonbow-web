@@ -8,11 +8,11 @@
  *
  * Main module of the application.
  */
-angular.module('moonbowWebApp', ['ui.router','moonbowWebApp.loggedIn','mgcrea.ngStrap'])
+angular.module('moonbowWebApp', ['ui.router','moonbowWebApp.loggedIn', 'moonbowWebApp.Me','mgcrea.ngStrap'])
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
 
+    $stateProvider
     .state('home', {
       url: "/home",
       templateUrl: "views/home.html",
